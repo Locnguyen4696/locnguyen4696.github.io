@@ -4,12 +4,20 @@
 	<title>Bảo mật ứng dụng cho mọi ứng dụng iOS</title>
 	<style>
 		body{
-			width: 1000px;
+			background-color: #F4F7FA; 
+			 
+		}
+		#nen{
+			background-color: #ffffff;
+			width: 900px;
+			margin-top: 50px;
+			margin-left: 100px;
 			padding-right: 100px;
-			padding-left: 100px;
-			padding-top: 50px; 
+			padding-left: 50px;
+			padding-top: 50px;
 		}
 		pre{
+			width: 100%;
 			margin-left: 50px;
 			margin-right: 50px;
 			background-color: black;
@@ -26,18 +34,19 @@
 	</style>
 </head>
 <body>
+	<div id="nen">
 	<h1>Bảo mật ứng dụng cho mọi ứng dụng iOS</h1>
 	<p>10 tháng 01 năm 2020.</p>
 	<p id="sub">Bảo mật ứng dụng là một trong những khía cạnh quan trọng nhất của phát triển phần mềm.<br>
 	Người dùng ứng dụng của chúng tôi hy vọng rằng những mẩu thông tin của họ đang được giữ kín. Dữ liệu ứng dụng nhạy cảm của chúng tôi không nên được cho đi.</p>
 	<h2>Lưu trữ dữ liệu nhạy cảm ở những vị trí sai</h2>
 	<p class="noi-dung">
-		<p>Tôi đã nghiên cứu nhiều ứng dụng từ AppStore và rất nhiều trong số chúng đang mắc lỗi tương tự, lưu trữ dữ liệu nhạy cảm ở những nơi chúng không thuộc về.
+		<p>Tôi đã nghiên cứu nhiều ứng dụng từ <b>AppStore</b> và rất nhiều trong số chúng đang mắc lỗi tương tự, lưu trữ dữ liệu nhạy cảm ở những nơi chúng không thuộc về.
 		</p>
-		<p>Nếu bạn đang lưu trữ dữ liệu nhạy cảm trong UserDefaults, thì bạn đang mạo hiểm thông tin của ứng dụng.<br>
-			UserDefaults được lưu trữ đơn giản dưới dạng tệp danh sách thuộc tính được đặt trong thư mục Tùy chọn của ứng dụng. Chúng được lưu trong ứng dụng mà không bị mã hoá dưới mọi hình thức.
+		<p>Nếu bạn đang lưu trữ dữ liệu nhạy cảm trong <b>UserDefaults</b>, thì bạn đang mạo hiểm thông tin của ứng dụng.<br>
+			<b>UserDefaults</b> được lưu trữ đơn giản dưới dạng tệp danh sách thuộc tính được đặt trong thư mục Tùy chọn của ứng dụng. Chúng được lưu trong ứng dụng mà không bị mã hoá dưới mọi hình thức.
 		</p>
-		<p>Về cơ bản, bằng cách sử dụng ứng dụng mac của bên thứ ba như iMazed chẳng hạn, thậm chí không cần phải Bẻ khóa thiết bị, bạn có thể dễ dàng xem dữ liệu UserDefaults cho bất kỳ ứng dụng nào được tải xuống từ AppStore.<br>
+		<p>Về cơ bản, bằng cách sử dụng ứng dụng mac của bên thứ ba như iMazed chẳng hạn, thậm chí không cần phải Bẻ khóa thiết bị, bạn có thể dễ dàng xem dữ liệu <b>UserDefaults</b> cho bất kỳ ứng dụng nào được tải xuống từ AppStore.<br>
 			Các ứng dụng mac này được thiết kế đơn giản để cho phép bạn khám phá và quản lý các tệp ứng dụng của bên thứ ba có trên iPhone. 
 		</p>
 		<p>Lý do thúc đẩy tôi viết bài viết này là tôi phát hiện ra rằng rất nhiều ứng dụng mà tôi đã cài đặt từ AppStore viết dữ liệu nhạy cảm của họ trên UserDefault.<br>
@@ -47,7 +56,7 @@
 	</p>
 	<h2>Cách đúng đắn</h2>
 	<p class="noi-dung">
-		<p>Bạn nên luôn luôn ghi nhớ một điều khi lưu dữ liệu trên ứng dụng iOS, UserDefaults chỉ được thiết kế để lưu một lượng nhỏ dữ liệu như tùy chọn của người dùng bên trong ứng dụng, những thứ hoàn toàn không nhạy cảm.<br>
+		<p>Bạn nên luôn luôn ghi nhớ một điều khi lưu dữ liệu trên ứng dụng iOS, <b>UserDefaults</b> chỉ được thiết kế để lưu một lượng nhỏ dữ liệu như tùy chọn của người dùng bên trong ứng dụng, những thứ hoàn toàn không nhạy cảm.<br>
 			Để lưu dữ liệu nhạy cảm với ứng dụng, chúng ta nên sử dụng các dịch vụ bảo mật do Apple cung cấp.
 		</p>
 		<p>Keychain Service giúp bạn giải quyết những vấn đề này bằng cách cung cấp cho ứng dụng của bạn cách lưu trữ một lượng nhỏ dữ liệu người dùng trong cơ sở dữ liệu được mã hóa có tên là keychain.<br>
@@ -55,7 +64,7 @@
 		</p>
 		<p>Bạn cũng có thể lưu trữ các mục như khóa mật mã và chứng chỉ mà bạn quản lý bằng Certificate, Key, and Trust Services.
 		</p>
-		<img src="img/img1.png">
+		<img src="img/img1.png" width="100%">
 	</p>
 	<h2>Keychain Services API</h2>
 	<p class="noi-dung">
@@ -64,37 +73,37 @@
 		</p>
 		<pre>
 			<code>
-		class KeychainService {
-				func save(_ password: String, for account: String) {
-				let password = password.data(using: String.Encoding.utf8)!
-				let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-				kSecAttrAccount as String: account,
-				kSecValueData as String: password]
-				let status = SecItemAdd(query as CFDictionary, nil)
-				guard status == errSecSuccess else { return print("save error")
-			}
+	class KeychainService {
+			func save(_ password: String, for account: String) {
+			let password = password.data(using: String.Encoding.utf8)!
+			let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+			kSecAttrAccount as String: account,
+			kSecValueData as String: password]
+			let status = SecItemAdd(query as CFDictionary, nil)
+			guard status == errSecSuccess else { return print("save error")
 		}
+	}
 			</code>
 		</pre>
 		<p>
-			Phần từ điển truy vấn kSecClass: kSecClassGenericPassword chỉ ra rằng mục đó là mật khẩu, từ đó các dịch vụ keychain hiểu rằng dữ liệu yêu cầu mã hóa.<br>
-			Sau đó, chúng tôi thêm mật khẩu mới vào móc khóa bằng cách gọi SecItemAdd với truy vấn chúng tôi đã tạo.<br>
+			Phần từ điển truy vấn <b>kSecClass: kSecClassGenericPassword</b> chỉ ra rằng mục đó là mật khẩu, từ đó các dịch vụ keychain hiểu rằng dữ liệu yêu cầu mã hóa.<br>
+			Sau đó, chúng tôi thêm mật khẩu mới vào móc khóa bằng cách gọi <b>SecItemAdd</b> với truy vấn chúng tôi đã tạo.<br>
 			Lấy dữ liệu tương tự:
 		</p>
 		<pre>
 			<code>
-		func retrivePassword(for account: String) -> String? {
-			let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-			kSecAttrAccount as String: account,
-			kSecMatchLimit as String: kSecMatchLimitOne,
-			kSecReturnData as String: kCFBooleanTrue]
+	func retrivePassword(for account: String) -> String? {
+		let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+		kSecAttrAccount as String: account,
+		kSecMatchLimit as String: kSecMatchLimitOne,
+		kSecReturnData as String: kCFBooleanTrue]
 
-			var retrivedData: AnyObject? = nil
-			let _ = SecItemCopyMatching(query as CFDictionary, &retrivedData)
+		var retrivedData: AnyObject? = nil
+		let _ = SecItemCopyMatching(query as CFDictionary, &retrivedData)
 
-			guard let data = retrivedData as? Data else {return nil}	
-			return String(data: data, encoding: String.Encoding.utf8)
-		}
+		guard let data = retrivedData as? Data else {return nil}	
+		return String(data: data, encoding: String.Encoding.utf8)
+	}
 			</code>
 		</pre>
 		<p>
@@ -102,18 +111,18 @@
 		</p>
 		<pre>
 			<code>
-		func testPaswordRetrive() {
-			let  password = "123456"
-			let account = "User"
-			keyChainService.save(password, for: account)
-			XCTAssertEqual(keyChainService.retrivePassword(for: account), password)
-		}
+	func testPaswordRetrive() {
+		let  password = "123456"
+		let account = "User"
+		keyChainService.save(password, for: account)
+		XCTAssertEqual(keyChainService.retrivePassword(for: account), password)
+	}
 			</code>
 		</pre>
 		<p>
 			Keychain API ban đầu có vẻ hơi phức tạp khi sử dụng nếu bạn phải lưu nhiều hơn một mật khẩu. Tôi khuyến khích bạn tạo mặt tiền cho nó để giúp bạn lưu và sửa đổi dữ liệu theo cách tốt nhất tùy thuộc vào trường hợp sử dụng ứng dụng của bạn.<br>
 			Nếu bạn muốn biết thêm về mẫu mặt tiền và cách tạo các hàm bao đơn giản cho các hệ thống con phức tạp, thì bài viết này có thể giúp bạn rất nhiều.<br>
-			Ngoài ra, có rất nhiều thư viện nguồn mở giúp việc sử dụng API Keychain đơn giản hơn. Một số trong số họ là SAMKeychain và SwiftKeychainWrapper.
+			Ngoài ra, có rất nhiều thư viện nguồn mở giúp việc sử dụng API Keychain đơn giản hơn. Một số trong số họ là <b>SAMKeychain</b> và <b>SwiftKeychainWrapper</b>.
 		</p>
 	</p>
 	<h2>Lưu mật khẩu và thực hiện xác thực</h2>
@@ -131,7 +140,7 @@ Một cách tiếp cận tốt hơn là lưu trữ mật khẩu và sử dụng 
 	<h2>Mã hóa dữ liệu nhạy cảm</h2>
 	<p class="noi-dung">
 		<p>
-			Việc tự thực hiện băm có thể rất phức tạp và quá mức cần thiết, vì vậy trong bài viết này, chúng tôi sẽ sử dụng sự trợ giúp của Thư viện CryptoSwift mã nguồn mở iOS.
+			Việc tự thực hiện băm có thể rất phức tạp và quá mức cần thiết, vì vậy trong bài viết này, chúng tôi sẽ sử dụng sự trợ giúp của Thư viện <b>CryptoSwift</b> mã nguồn mở iOS.
 		</p>
 		<p>
 			CryptoSwift là một bộ sưu tập ngày càng tăng các thuật toán mã hóa tiêu chuẩn và an toàn được triển khai trong Swift.
@@ -141,11 +150,11 @@ Một cách tiếp cận tốt hơn là lưu trữ mật khẩu và sử dụng 
 		</p>
 		<pre>
 			<code>
-		func saveEncryptedPassword(_ password: String, for account: String) {
-   			let salt = Array("salty".utf8)
-   			let key = try! HKDF(password: Array(password.utf8), salt: salt, variant: .sha256).calculate().toHexString()
-   			keychainService.save(key, for: account)
-		}
+	func saveEncryptedPassword(_ password: String, for account: String) {
+   		let salt = Array("salty".utf8)
+   		let key = try! HKDF(password: Array(password.utf8), salt: salt, variant: .sha256).calculate().toHexString()
+   		keychainService.save(key, for: account)
+	}
 			</code>
 		</pre>
 		<p>
@@ -155,11 +164,11 @@ Một cách tiếp cận tốt hơn là lưu trữ mật khẩu và sử dụng 
 			Hãy phá vỡ những gì đang xảy ra trong phương pháp này:
 		</p>
 		<ul>
-			<li>Salt là một chuỗi duy nhất được sử dụng để trộn mật khẩu.</li>
-			<li>sha256 hoàn thành kiểu băm SHA-2</li>
-			<li>HKDF là một hàm phái sinh khóa đơn giản (KDF) dựa trên mã xác thực tin nhắn dựa trên hàm băm (HMAC)</li>
+			<li><b>Salt</b> là một chuỗi duy nhất được sử dụng để trộn mật khẩu.</li>
+			<li><b>sha256</b> hoàn thành kiểu băm <b>SHA-2</b></li>
+			<li><b>HKDF</b> là một hàm phái sinh khóa đơn giản (<b>KDF</b>) dựa trên mã xác thực tin nhắn dựa trên hàm băm (<b>HMAC</b>)</li>
 		</ul>
-		<p>Chúng tôi tạo ra một loại salt để khiến việc tấn công chúng tôi khó khăn hơn.
+		<p>Chúng tôi tạo ra một loại <b>salt</b> để khiến việc tấn công chúng tôi khó khăn hơn.
 
 		Nếu chúng tôi chỉ băm mật khẩu của mình, tin tặc có thể có một danh sách các mật khẩu được sử dụng nhiều nhất và tạo băm của chúng và so sánh chúng với mật khẩu đã tạo của chúng tôi. Và sau đó có thể dễ dàng tìm thấy mật khẩu của chúng tôi cho một tài khoản nhất định.
 		</p>
@@ -167,14 +176,15 @@ Một cách tiếp cận tốt hơn là lưu trữ mật khẩu và sử dụng 
 			Bây giờ chúng tôi có thể xác thực với máy chủ bằng tài khoản và khóa tùy chỉnh của chúng tôi thay vì mật khẩu trực tiếp.
 		</p>
 		<pre><code>
-		authManager.login(key, user)
+	authManager.login(key, user)
 		</code></pre>
 		<p>
-			Tất nhiên, ứng dụng và máy chủ nên chia sẻ cùng một loại salf. Sau đó, phần cuối sẽ phải so sánh các khóa giống nhau được tạo bằng cách sử dụng cùng một thuật toán để xác minh người dùng.
+			Tất nhiên, ứng dụng và máy chủ nên chia sẻ cùng một loại <b>salf</b>. Sau đó, phần cuối sẽ phải so sánh các khóa giống nhau được tạo bằng cách sử dụng cùng một thuật toán để xác minh người dùng.
 		</p>
 		<p>
 			Bằng cách sử dụng phương pháp này, chúng tôi đưa bảo mật của chúng tôi lên một tầm cao mới và khiến việc tấn công ứng dụng của chúng tôi trở thành một nhiệm vụ cực kỳ phức tạp.
 		</p>
 	</p>
+</div>
 </body>
 </html>
