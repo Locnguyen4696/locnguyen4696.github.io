@@ -1,35 +1,62 @@
 <html>
 <head>
-    <title>Danh sách sản phẩm</title>
-    <meta charset="UTF-8"/>
+  <title>Danh sách sản phẩm</title>
+  <meta charset="UTF-8"/>
 </head>
 <style>
+  body{
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   h1{
     text-align: center;
   }
-  table{
-    width: 100%;
+  img{
+    width:19%;
   }
-  #anh{
-    width:200px;
+  a:visited{
+    text-decoration: none;
+  }
+  #menu{
+    width: 100%;
+    
+  }
+  #button{
+    display: block;
+    background-color: #0099CC;
+    color: #CCFFCC;
+    float:left;
+    width: 19%;
+    height: 50px;
+    text-align: center;
+    padding-top: 22px;
+    font-size: 20px;
+  } 
+  #button:visited{
+    text-decoration: none;
+    color: #CCFFCC;
+  }
+  #button:hover{
+    background-color: #66CCFF;
   }
 </style>
 <body>
   <h1>Linh kiện máy tính</h1>
-  <table>
-    
-    <tr>
-      <th><a href="main.html">Main</a></th>
-      <th><a href="cpu.html">CPU</a></th>
-      <th><a href="vga.html">VGA</a></th>
-      <th><a href="ram.html">Ram</a></th>
-      <th><a href="psu.html">PSU</a></th>
-    <tr>
-      <th><a href="main.html"><img id="anh" src="https://maytinhgiatot.vn/images/product/1349_2018030810542001_m.png" alt="Main"></a></th>
-      <th><a href="cpu.html"><img id="anh" src="https://maytinhgiatot.vn/images/product/1578_64a81af6c37b2535802559b68b60e47b_cpu%20intel%20core%20i3-9100f_1.jpg" alt="CPU"></a></th>
-      <th><a href="vga.html"><img id="anh" src="https://maytinhgiatot.vn/images/product/1732_1050-Aero-1-1.jpg" alt="VGA"></a></th> 
-      <th><a href="ram.html"><img id="anh" src="https://maytinhgiatot.vn/images/product/1502_ram-gskill-ripjaws-v.jpg" alt="Ram"></a></th> 
-      <th><a href="psu.html"><img id="anh" src="https://maytinhgiatot.vn/images/product/1495_6648.jpg" alt="PSU"></a></th> 
-  </table>
+  <div id="menu">
+    <a id="button" href="main.html">Main</a>
+    <a id="button" href="cpu.html">CPU</a>
+    <a id="button" href="vga.html">VGA</a>
+    <a id="button" href="ram.html">Ram</a>
+    <a id="button" href="psu.html">PSU</a>
+  </div>
+  <div id="avatar">
+    <a href="main.html"><img src="img/main.png" alt="Main"></a>
+    <a href="cpu.html"><img src="img/CPU.jpg" alt="CPU"></a>
+    <a href="vga.html"><img src="img/VGA.jpg" alt="VGA"></a>
+    <a href="ram.html"><img src="img/RAM.jpg" alt="Ram"></a>
+    <a href="psu.html"><img src="img/PSU.jpg" alt="PSU"></a>
+  </div>
 </body>
 </html>
