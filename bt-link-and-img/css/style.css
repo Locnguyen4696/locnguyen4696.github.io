@@ -54,11 +54,6 @@ a{
 	text-decoration: none;
 } 
 
-#button:visited{
-	text-decoration: none;
-	color: #CCFFCC;
-}
-
 #button:hover{
 	background-color: #66CCFF;
 }
