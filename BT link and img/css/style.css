@@ -10,7 +10,11 @@ h1{
 }
 
 .avatar{
-	width:19%;
+	display: block;
+	float:left;
+	width:200px;
+	border: none;
+	border-image-width: 0px;
 }
 
 .noidung{
@@ -39,11 +43,16 @@ h1{
 	background-color: #0099CC;
 	color: #CCFFCC;
 	float:left;
-	width: 19%;
+	width: 200px;
+	border: none;
 	height: 50px;
 	text-align: center;
 	padding-top: 22px;
 	font-size: 20px;
+} 
+
+a{
+	text-decoration: none;
 } 
 
 #button:visited{
