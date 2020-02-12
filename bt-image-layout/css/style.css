@@ -1,26 +1,26 @@
+*{
+	box-sizing: border-box;
+}
 body{
 	width: 1000px;
 	margin:auto;
 }
-#banner img{
-	width: 100%;
-}
 h1{
 	text-align: center;
 }
+#banner img{
+	width: 100%;
+}
 #main-content{
-	width: 100%;	
-
-
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
 }
 #main-content img{
-	width: 30%;
+	width: 100%;
+    height: 100%;
 	border: 5px solid white;
-	margin-left: 1.5%;
-
-
 }
+
 #main-content img:hover{
 	border:5px solid #003399;
-
 }
