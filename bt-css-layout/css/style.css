@@ -77,20 +77,13 @@ body{
 	grid-template-columns: 1fr 1fr 1fr;
 }
 #bai3 #red{
-	display: block;
-	float: left;
 	background-color: red;
 
 }
 #bai3 #green{
-
-	display: block;
-	float: left;
 	background-color: green;
 }
 #bai3 #blue{
-	display: block;
-	float: left;
 	background-color: blue;
 
 }
@@ -101,25 +94,15 @@ body{
 	height: 400px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 15px;
 }
 #bai4 #red{
-	margin-right: 10px;
-	display: block;
-	float: left;
 	background-color: red;
-
 }
 #bai4 #green{
-	margin-left: 5px;
-	margin-right: 5px;
-	display: block;
-	float: left;
 	background-color: green;
 }
 #bai4 #blue{
-	margin-left: 10px;
-	display: block;
-	float: left;
 	background-color: blue;
 }
 /*bai4 end*/
