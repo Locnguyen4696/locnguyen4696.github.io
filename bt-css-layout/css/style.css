@@ -103,21 +103,21 @@ body{
 	grid-template-columns: 1fr 1fr 1fr;
 }
 #bai4 #red{
-	margin-right: 5px;
+	margin-right: 10px;
 	display: block;
 	float: left;
 	background-color: red;
 
 }
 #bai4 #green{
-	margin-left: 2.5px;
-	margin-right: 2.5px;
+	margin-left: 5px;
+	margin-right: 5px;
 	display: block;
 	float: left;
 	background-color: green;
 }
 #bai4 #blue{
-	margin-left: 5px;
+	margin-left: 10px;
 	display: block;
 	float: left;
 	background-color: blue;
