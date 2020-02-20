@@ -1,0 +1,113 @@
+@keyframes heart{
+	0%{transform:scale(1);}
+	20%{transform:scale(1.2);}
+	40%{transform:scale(1);}
+	60%{transform:scale(1.2);}
+	80%{transform:scale(1);}
+	100%{transform:scale(1);}
+}
+@keyframes learning{
+	0%{z-index: 1;}
+	50%{z-index: 2;}
+	100%{z-index: 3;}
+}
+@keyframes coding{
+	0%{z-index: 3;}
+	50%{z-index: 1;}
+	100%{z-index: 2;}
+}
+@keyframes teaching{
+	0%{z-index: 2;}
+	50%{z-index: 3;}
+	100%{z-index: 1;}
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	width: 1000px;
+	margin: 0;
+	border:none;
+	margin: auto;
+}
+/*Bài 1*/
+#bai-1{
+	display: flex;
+	justify-content: center;
+	width: 100px;
+	height: 50px;
+	margin: auto;
+	margin-top: 50px;
+	background-color: #4183b2;
+	color:white;
+	align-items: center;
+	transition: 0.5s;
+}
+#bai-1:hover{
+	background-color: #15ab74;
+	border-radius: 50px;
+	cursor: pointer; 
+}
+/*Bài 1 end*/
+/*Bài 2*/
+#bai-2{
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(3,330px);
+	column-gap: 5px;
+}
+#bai-2 >div >img{
+	max-width:100%;
+}
+#bai-2>div>img:hover{
+	transition: 0.5s;
+	transform: scale(1.2);
+}
+/*Bài 2 end*/
+/*Bài 3*/
+#bai-3{
+	display: flex;
+	justify-content: center;
+}
+#bai-3>div{
+	width: 300px;
+}
+#bai-3 img{
+	animation: heart 1s linear infinite;
+}
+/*Bài 3 end*/
+/*Bài 4*/
+#bai-4{
+	width: 300px;
+	height: 150px;
+	position: relative;
+}
+#bai-4>div{
+	width: 300px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.th{
+	background-color: green;
+	color: white;
+	animation: learning 2s infinite;
+}
+.sub{
+	position: absolute;
+	top:49.99px;
+}
+.td{
+	top:100px;
+}
+.st{
+	background-color: orange;
+	color: white;
+	animation: coding 2s 0s infinite;
+}
+.nd{
+	background-color: purple;
+	color: white;
+	animation: teaching 2s 0s infinite;
+}
