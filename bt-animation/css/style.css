@@ -7,19 +7,19 @@
 	100%{transform:scale(1);}
 }
 @keyframes learning{
-	0%{z-index: 1;}
-	50%{z-index: 2;}
-	100%{z-index: 3;}
+	0%{opacity: 1;}
+	33%{opacity: 1;}
+	100%{opacity: 0;}
 }
 @keyframes coding{
-	0%{z-index: 3;}
-	50%{z-index: 1;}
-	100%{z-index: 2;}
+	0%{top:-18px;}
+	33%{top:-18px;}
+	100%{top:0px;}
 }
 @keyframes teaching{
-	0%{z-index: 2;}
-	50%{z-index: 3;}
-	100%{z-index: 1;}
+	0%{transform: scale(0.8);top:18px;}
+	66%{transform: scale(0.8);top:18px;}
+	100%{transform: scale(1);top:0px;}
 }
 *{
 	box-sizing: border-box;
@@ -79,35 +79,42 @@ body{
 /*Bài 4*/
 #bai-4{
 	width: 300px;
-	height: 150px;
-	position: relative;
+	height: 54px;
+	background-color: gray;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
 }
 #bai-4>div{
-	width: 300px;
-	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 300px;
+	height: 18px;
 }
-.th{
+
+.container{
+	position: relative;
+	overflow: hidden;
+}
+.learning{
+
 	background-color: green;
 	color: white;
-	animation: learning 2s infinite;
-}
-.sub{
 	position: absolute;
-	top:49.99px;
+	animation: learning 3s infinite;
 }
-.td{
-	top:100px;
-}
-.st{
+.coding{	
+
 	background-color: orange;
 	color: white;
-	animation: coding 2s 0s infinite;
+	position: absolute;
+	animation: coding 3s infinite;
 }
-.nd{
+.teaching{	
+
 	background-color: purple;
 	color: white;
-	animation: teaching 2s 0s infinite;
+	position: absolute;
+	animation: teaching 3s infinite;
 }
