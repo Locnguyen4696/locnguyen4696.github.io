@@ -58,9 +58,9 @@ body{
 }
 #bai-2 >div >img{
 	max-width:100%;
+	transition: 0.5s;
 }
 #bai-2>div>img:hover{
-	transition: 0.5s;
 	transform: scale(1.2);
 }
 /*Bài 2 end*/
