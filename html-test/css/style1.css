@@ -1,0 +1,23 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	width: 1000px;
+	margin: auto;
+	background-color: #E69A8DFF;
+	color: #5F4B8BFF;
+}
+a,a:visited,a:hover{
+	text-decoration: none;
+	font-size: 1.5em;
+	color: #5F4B8BFF;
+	text-decoration: underline;
+}
+p{
+	text-indent: 40px;
+}
+img{
+	display: block;
+	margin: auto;
+	max-height: 400px;
+}
