@@ -5,3 +5,6 @@
 <a href="https://locnguyen4696.github.io/bt-clone-menu/">Bài tập clone menu</a><br>
 <a href="https://locnguyen4696.github.io/bt-css-layout/">Bài tập CSS layout</a><br>
 <a href="https://locnguyen4696.github.io/bt-image-layout/index.html">Bài tập Image layout</a><br>
+<a href="https://locnguyen4696.github.io/bt-animation/index.html">Bài tập Animation</a><br>
+<a href="https://locnguyen4696.github.io/bt-menu-da-cap/index.html">Bài tập Menu đa cấp</a><br>
+<a href="https://locnguyen4696.github.io/html-test/index.html">Bài test HTML CSS</a><br>
