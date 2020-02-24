@@ -59,6 +59,7 @@ body{
 .special{
 	width: 100px;
 	grid-template-columns:1fr;
+	height: 150px;
 }
 .option:hover{
 	background-color: #efefef;
