@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+		var result="";
+		var mem=0;
+		function addInput(input) {
+			mem=parseInt(input)
+			document.getElementById("display").innerText = result+=input;
+		}	
+		function addNumber(){
+			mem+=parseInt(result);
+			result="";
+			document.getElementById("previous").innerText=mem;
+			document.getElementById("display").innerText=null;
+		}
+		function distractNumber(){
+			mem=parseInt(result);
+			result="";
+			document.getElementById("previous").innerText=mem;
+			document.getElementById("display").innerText=null;
+		}
+		function clearAll(){
+			mem="";
+			result="";
+			document.getElementById("previous").innerText=mem;
+			document.getElementById("display").innerText=0;
+		}
+		function equal(){
+			document.getElementById("previous").innerText=null;
+			document.getElementById("display").innerText=parseInt(mem)+parseInt(result);
+		}
+	</script>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<div id="main-container">
+		<div id="previous"></div>
+		<div id="display">0</div>
+		<div id="main">
+			<div><button onclick="">%</button></div>
+			<div><button onclick="clearAll()">CE</button></div>
+			<div><button onclick="">C</button></div>
+			<div><button onclick="">BackSpace</button></div>
+			<div><button onclick="">1/X</button></div>
+			<div><button onclick="">x<sup>2</sup></button></div>
+			<div><button onclick="">&#8730;2</button></div>
+			<div><button onclick="">&#247;</button></div>
+			<div><button onclick="addInput('7')">7</button></div>
+			<div><button onclick="addInput('8')">8</button></div>
+			<div><button onclick="addInput('9')">9</button></div>
+			<div><button onclick="">x</button></div>
+			<div><button onclick="addInput('4')">4</button></div>
+			<div><button onclick="addInput('5')">5</button></div>
+			<div><button onclick="addInput('6')">6</button></div>
+			<div><button onclick="distractNumber()">-</button></div>
+			<div><button onclick="addInput('1')">1</button></div>
+			<div><button onclick="addInput('2')">2</button></div>
+			<div><button onclick="addInput('3')">3</button></div>
+			<div><button onclick="addNumber()">+</button></div>
+			<div><button onclick="">+/-</button></div>
+			<div><button onclick="addInput('0')">0</button></div>
+			<div><button onclick="">.</button></div>
+			<div><button onclick="equal()">=</button></div>	
+		</div>
+	</div>
+	
+</body>
+</html>
