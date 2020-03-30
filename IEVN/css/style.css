@@ -113,3 +113,35 @@ a,a:hover,a:visited{
 .sub-menu>ul>li:hover >ul{
 	display: block;
 }
+.main-container{
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	background-color: white;
+}
+.right-content{
+	padding-top: 10px;
+}
+.search-box{
+	display: block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+.search-box input{
+	width: 67%;
+	margin: 0;
+}
+.search-box button{
+	width: 30%;
+	margin: 0;
+}
+.mini-menu{
+   border: solid 1px #ccc;
+   margin-bottom: 6px;
+}
+.mini-menu li{
+	line-height: 28px;
+	padding-left:10px;
+	font-size: 12px;
+	cursor: pointer;
+	color: #525252;
+}
