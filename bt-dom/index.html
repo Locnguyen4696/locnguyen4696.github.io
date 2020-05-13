@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>Bài tập DOM</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <p id="1">Part1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, doloribus tempora expedita qui
+        nihil voluptatem, nisi nulla velit nam recusandae dolorum reprehenderit eos, quas laboriosam aliquid accusamus
+        ea assumenda consectetur?</p>
+    <p id="2">Part 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat consequuntur veritatis,
+        ipsum dignissimos optio exercitationem dolor neque dolore impedit aliquid nesciunt unde id fuga, aliquam
+        voluptatibus sint praesentium recusandae!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, doloribus tempora expedita qui nihil
+        voluptatem, nisi nulla velit nam recusandae dolorum reprehenderit eos, quas laboriosam aliquid accusamus ea
+        assumenda consectetur?</p>
+    <p id="3">Part 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi, magnam non mollitia
+        perferendis iusto sed ea at quaerat accusantium placeat nesciunt maxime delectus. Temporibus, error delectus.
+        Perspiciatis, quos voluptates.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, doloribus tempora expedita qui nihil
+        voluptatem, nisi nulla velit nam recusandae dolorum reprehenderit eos, quas laboriosam aliquid accusamus ea
+        assumenda consectetur?</p>
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="changeBgColor()">Change Background Color</button>
+    <button onclick="copyContent()">Copy Content</button>
+    <button onclick="changeFontSize()">Change Font Size</button>
+    <button onclick="increaseFontSize()">Increase Font Size</button>
+    <button onclick="decreaseFontSize()">Decrease Font Size</button>
+    <script>
+        function changeColor() {
+            let color = [`green`, `yellow`, 'red'];
+            for (i = 0; i < color.length; i++) {
+                document.getElementById(i + 1).style.color = color[i];
+            }
+        }
+        function changeBgColor(color) {
+            let input = prompt(`Which color do you want?`);
+            if (input != null) {
+                color = input;
+            }
+            document.body.style.backgroundColor = color;
+        }
+        function copyContent(copy, paste) {
+            let input1=prompt(`Which paragraph do you want to change?`);
+            let input2=prompt(`From which one?`)
+            if (input1 != null&&input2 != null) {
+                paste = input1;
+                copy = input2;
+            }
+            document.getElementById(paste).innerText = document.getElementById(copy).innerText
+        }
+        function changeFontSize(x) {
+            let input = prompt(`How do you want to change this font size?`);
+            if (input != null) {
+                x = input;
+            }
+            document.body.style.fontSize = x;
+        }
+        function increaseFontSize(paragraph) {
+            let input = prompt(`Which paragraph do you want to change?`);
+            if (input != null) {
+                paragraph = input;
+            }
+
+            let para = document.getElementById(paragraph);
+            if (parseInt(window.getComputedStyle(para).getPropertyValue('font-size')) < 30) {
+                para.style.fontSize = parseInt(window.getComputedStyle(para).getPropertyValue('font-size')) + 1;
+            }
+
+        }
+        function decreaseFontSize(paragraph) {
+            let input = prompt(`Which paragraph do you want to change?`);
+            if (input != null) {
+                paragraph = input;
+            }
+            let para = document.getElementById(paragraph);
+            if (parseInt(window.getComputedStyle(para).getPropertyValue('font-size')) > 10) {
+                para.style.fontSize = parseInt(window.getComputedStyle(para).getPropertyValue('font-size')) - 1;
+            }
+        }
+    </script>
+</body>
+
+</html>
