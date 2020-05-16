@@ -2,6 +2,7 @@ let num = "";
 let mem = 0;
 let result = 0;
 let cal = "";
+
 function displayNumber(input){
   let output=input.toString();
   if(output.length>12){
@@ -45,6 +46,7 @@ function clearInput() {
 function clearNumber() {
   num = document.getElementById("display").innerText;
   document.getElementById("display").innerText = num.slice(0, num.length - 1);
+  mem=parseInt(num)
 }
 function multiInverse() {
   mem = 1 / mem;
@@ -91,7 +93,7 @@ function calculateNumber(input) {
         document.getElementById("previous").innerText = displayNumber(result);
         document.getElementById("cal").innerText = cal;
         break;
-      case "*":
+      case "x":
         result *= mem;
         mem = 0;
         num = "";
@@ -100,7 +102,7 @@ function calculateNumber(input) {
         document.getElementById("previous").innerText = displayNumber(result);
         document.getElementById("cal").innerText = cal;
         break;
-      case "/":
+      case "&#247;":
         result /= mem;
         mem = 0;
         num = "";
@@ -132,7 +134,7 @@ function equal() {
       mem = result;
       result = 0;
       break;
-    case "*":
+    case "x":
       result *= mem;
       num = "";
       document.getElementById("display").innerText = displayNumber(result);
@@ -141,7 +143,7 @@ function equal() {
       mem = result;
       result = 0;
       break;
-    case "/":
+    case "&#247;":
       result /= mem;
       num = "";
       document.getElementById("display").innerText = displayNumber(result);
