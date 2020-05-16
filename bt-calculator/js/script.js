@@ -2,12 +2,32 @@ let num = "";
 let mem = 0;
 let result = 0;
 let cal = "";
+function displayNumber(input){
+  let output=input.toString();
+  if(output.length>12){
+    if (output.indexOf('e')!==-1){
+      output=output.substr(0,8)+output.substr(output.indexOf('e'));
+    }else{
+      output=output.substr(0,12);
+    }
+  } else {
+    if (output.indexOf('e')!==-1){
+      output=output.substr(0,output.indexOf('e')-1)+output.substr(output.indexOf('e'));
+    }else{
+      output=output.substr(0,12);
+    }
+  }
+  return output;
+}
 function addInput(input) {
-  document.getElementById("display").innerText = num += input;
+  if(num.length<=12){
+    document.getElementById("display").innerText = num += input;
+    mem = parseInt(num);
+  }
 }
 function percentNumber() {
-  num = document.getElementById("display").innerText;
-  document.getElementById("display").innerText = parseInt(num)/100;
+  mem = mem / 100;
+  document.getElementById("display").innerText = displayNumber(mem);
 }
 function clearAll() {
   num = "";
@@ -27,94 +47,108 @@ function clearNumber() {
   document.getElementById("display").innerText = num.slice(0, num.length - 1);
 }
 function multiInverse() {
-  result = document.getElementById("display").innerText;
-  document.getElementById("display").innerText = 1 / result;
+  mem = 1 / mem;
+  document.getElementById("display").innerText = displayNumber(mem);
 }
 function squareNumber() {
-  result = document.getElementById("display").innerText;
-  document.getElementById("display").innerText = result * result;
+  mem *= mem;
+  document.getElementById("display").innerText = displayNumber(mem);
 }
 function squareRoot() {
-  result = document.getElementById("display").innerText;
-  document.getElementById("display").innerText = Math.sqrt(result);
+  mem = Math.sqrt(mem);
+  document.getElementById("display").innerText = displayNumber(mem);
 }
 function addInverse() {
-  result = document.getElementById("display").innerText;
-  mem = result * -1;
-  document.getElementById("display").innerText = mem;
+  mem *= -1;
+  document.getElementById("display").innerText = displayNumber(mem);
 }
 function calculateNumber(input) {
-  if (mem == 0) {
-    mem = parseInt(num);
+  if (result == 0) {
+    result = mem;
+    mem = 0;
     num = "";
-    document.getElementById("display").innerText = num;
-    document.getElementById("previous").innerText = mem;
     cal = input;
+    document.getElementById("display").innerText = num;
+    document.getElementById("previous").innerText = displayNumber(result);
     document.getElementById("cal").innerText = cal;
   } else {
     switch (cal) {
       case "+":
-        mem += parseInt(num);
+        result += mem;
+        mem = 0;
         num = "";
+        cal = input;
         document.getElementById("display").innerText = num;
-        document.getElementById("previous").innerText = mem;
+        document.getElementById("previous").innerText = displayNumber(result);
+        document.getElementById("cal").innerText = cal;
         break;
       case "-":
-        mem -= parseInt(num);
+        result -= mem;
+        mem = 0;
         num = "";
+        cal = input;
         document.getElementById("display").innerText = num;
-        document.getElementById("previous").innerText = mem;
+        document.getElementById("previous").innerText = displayNumber(result);
+        document.getElementById("cal").innerText = cal;
         break;
       case "*":
-        mem *= parseInt(num);
+        result *= mem;
+        mem = 0;
         num = "";
+        cal = input;
         document.getElementById("display").innerText = num;
-        document.getElementById("previous").innerText = mem;
+        document.getElementById("previous").innerText = displayNumber(result);
+        document.getElementById("cal").innerText = cal;
         break;
       case "/":
-        mem /= parseInt(num);
+        result /= mem;
+        mem = 0;
         num = "";
+        cal = input;
         document.getElementById("display").innerText = num;
-        document.getElementById("previous").innerText = mem;
+        document.getElementById("previous").innerText = displayNumber(result);
+        document.getElementById("cal").innerText = cal;
         break;
     }
-    cal = input;
-    document.getElementById("cal").innerText = cal;
   }
 }
 function equal() {
   switch (cal) {
     case "+":
-      mem += parseInt(num);
-      num = "" + mem;
-      mem = 0;
-      document.getElementById("display").innerText = num;
+      result += mem;
+      num = "";
+      document.getElementById("display").innerText = displayNumber(result);
       document.getElementById("previous").innerText = "";
       document.getElementById("cal").innerText = "";
+      mem = result;
+      result = 0;
       break;
     case "-":
-      mem -= parseInt(num);
-      num = "" + mem;
-      mem = 0;
-      document.getElementById("display").innerText = num;
+      result -= mem;
+      num = "";
+      document.getElementById("display").innerText = displayNumber(result);
       document.getElementById("previous").innerText = "";
       document.getElementById("cal").innerText = "";
+      mem = result;
+      result = 0;
       break;
     case "*":
-      mem *= parseInt(num);
-      num = "" + mem;
-      mem = 0;
-      document.getElementById("display").innerText = num;
+      result *= mem;
+      num = "";
+      document.getElementById("display").innerText = displayNumber(result);
       document.getElementById("previous").innerText = "";
       document.getElementById("cal").innerText = "";
+      mem = result;
+      result = 0;
       break;
     case "/":
-      mem /= parseInt(num);
-      num = "" + mem;
-      mem = 0;
-      document.getElementById("display").innerText = num;
+      result /= mem;
+      num = "";
+      document.getElementById("display").innerText = displayNumber(result);
       document.getElementById("previous").innerText = "";
       document.getElementById("cal").innerText = "";
+      mem = result;
+      result = 0;
       break;
   }
 }

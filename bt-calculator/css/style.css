@@ -44,7 +44,21 @@ body{
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #main>div button{
+
 	display: block;
 	width: 100%;
-	height: 100%;;
+	height: 100%;
+	font-weight: bolder;
+	font-size: 16px;
+	background-color: #fcfcfc;
+}
+#main>div button:hover{
+	cursor: pointer;
+	background-color: #b8b8be !important;
+}
+#equal{
+	background-color: #838aca !important;
+}
+#calButton{
+	background-color: #ededf1 !important;
 }

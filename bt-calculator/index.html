@@ -9,33 +9,53 @@
     <div class="wrapper">
       <div id="main-container">
         <div id="previous"></div>
-		<div id="display">0</div>
-		<div id="cal"></div>
+        <div id="display">0</div>
+        <div id="cal"></div>
         <div id="main">
-          <div><button onclick="percentNumber()">%</button></div>
-          <div><button onclick="clearAll()">CE</button></div>
-          <div><button onclick="clearInput()">C</button></div>
-          <div><button onclick="clearNumber()">BackSpace</button></div>
-          <div><button onclick="multiInverse()">1/X</button></div>
-          <div><button onclick="squareNumber()">x<sup>2</sup></button></div>
-          <div><button onclick="squareRoot()">&#8730;2</button></div>
-          <div><button onclick="calculateNumber('/')">&#247;</button></div>
+          <div><button onclick="percentNumber()" id="calButton">%</button></div>
+          <div><button onclick="clearAll()" id="calButton">CE</button></div>
+          <div><button onclick="clearInput()" id="calButton">C</button></div>
+          <div>
+            <button onclick="clearNumber()" id="calButton">BackSpace</button>
+          </div>
+          <div>
+            <button onclick="multiInverse()" id="calButton">1/X</button>
+          </div>
+          <div>
+            <button onclick="squareNumber()" id="calButton">
+              x<sup>2</sup>
+            </button>
+          </div>
+          <div>
+            <button onclick="squareRoot()" id="calButton">&#8730;2</button>
+          </div>
+          <div>
+            <button onclick="calculateNumber('/')" id="calButton">
+              &#247;
+            </button>
+          </div>
           <div><button onclick="addInput('7')">7</button></div>
           <div><button onclick="addInput('8')">8</button></div>
           <div><button onclick="addInput('9')">9</button></div>
-          <div><button onclick="calculateNumber('*')">x</button></div>
+          <div>
+            <button onclick="calculateNumber('*')" id="calButton">x</button>
+          </div>
           <div><button onclick="addInput('4')">4</button></div>
           <div><button onclick="addInput('5')">5</button></div>
           <div><button onclick="addInput('6')">6</button></div>
-          <div><button onclick="calculateNumber('-')">-</button></div>
+          <div>
+            <button onclick="calculateNumber('-')" id="calButton">-</button>
+          </div>
           <div><button onclick="addInput('1')">1</button></div>
           <div><button onclick="addInput('2')">2</button></div>
           <div><button onclick="addInput('3')">3</button></div>
-          <div><button onclick="calculateNumber('+')">+</button></div>
+          <div>
+            <button onclick="calculateNumber('+')" id="calButton">+</button>
+          </div>
           <div><button onclick="addInverse()">+/-</button></div>
           <div><button onclick="addInput('0')">0</button></div>
           <div><button onclick="">.</button></div>
-          <div><button onclick="equal()">=</button></div>
+          <div><button onclick="equal()" id="equal">=</button></div>
         </div>
       </div>
     </div>
