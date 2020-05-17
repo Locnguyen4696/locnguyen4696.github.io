@@ -23,8 +23,11 @@ function displayNumber(input){
 function addInput(input) {
   if(num.length<=12){
     document.getElementById("display").innerText = num += input;
-    mem = parseInt(num);
+    mem = parseFloat(num);
   }
+}
+function addFloat(){
+  document.getElementById("display").innerText = num+=".";
 }
 function percentNumber() {
   mem = mem / 100;
@@ -46,7 +49,7 @@ function clearInput() {
 function clearNumber() {
   num = document.getElementById("display").innerText;
   document.getElementById("display").innerText = num.slice(0, num.length - 1);
-  mem=parseInt(num)
+  mem=parseFloat(num)
 }
 function multiInverse() {
   mem = 1 / mem;
