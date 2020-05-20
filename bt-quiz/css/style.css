@@ -1,0 +1,211 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: black;
+}
+.quiz {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.header {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  line-height: 6vh;
+  margin: 2vh;
+}
+.header div {
+  background-color: #545454;
+  width: 50px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.2s;
+  display: none;
+}
+.header div:hover {
+  background-color: #808080;
+}
+.main-container {
+  transition: 1s;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #461a42;
+  margin: auto;
+  width: 100vw;
+  height: 20vh;
+  margin: 40vh 0;
+  text-align: center;
+}
+.main-container h1 {
+  color: aliceblue;
+  font-size: 40px;
+  padding: 50px 0 40px 0;
+}
+.main-container .button {
+  width: 10vw;
+  margin: auto;
+  background-color: white;
+  line-height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.started {
+  position: absolute;
+  width: 98vw;
+  height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.question{
+    color: aliceblue;
+    font-size: 40px;
+    padding: 100px 0 50px 0;
+}
+.answer{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    height: 50%;
+    display: none;
+}
+.answer div{
+    width: 20%;
+    background-color: #2F6DAE;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #62C370;
+    cursor: pointer;
+}
+

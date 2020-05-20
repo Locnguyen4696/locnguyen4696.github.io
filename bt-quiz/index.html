@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bt Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="quiz">
+      <div class="header">
+        <div class="quit" onclick="quit()">X</div>
+        <div class="skip"onclick="skip()">Skip</div>
+      </div>
+      <div class="main-container">
+        <h1>Are you ready?</h1>
+        <div class="button" onclick="getStart()">Start</div>
+        <div class="question"></div>
+        <div class="answer">
+          <div id="a" onclick="checkAnswer('a')"></div>
+          <div id="b" onclick="checkAnswer('b')"></div>
+          <div id="c" onclick="checkAnswer('c')"></div>
+          <div id="d" onclick="checkAnswer('d')"></div>
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
