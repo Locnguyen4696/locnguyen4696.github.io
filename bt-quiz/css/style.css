@@ -149,16 +149,15 @@ body {
 }
 .header div:hover {
   background-color: #808080;
+  cursor: pointer;
 }
 .main-container {
   transition: 1s;
-  top: 50%;
-  transform: translateY(-50%);
   background-color: #461a42;
   margin: auto;
   width: 100vw;
-  height: 20vh;
-  margin: 40vh 0;
+  height: 40vh;
+  margin: 24vh 0;
   text-align: center;
 }
 .main-container h1 {
@@ -208,4 +207,17 @@ body {
     color: #62C370;
     cursor: pointer;
 }
-
+.congrat{
+  width: 100vw;
+  height: 70vh;
+  margin-top: 15vh;
+  background-color: #461a42;
+}
+.congrat h1{
+  color: aliceblue;
+  text-align: center;
+  font-size: 50px;
+}
+.scoreboard {
+  color: aliceblue;
+}

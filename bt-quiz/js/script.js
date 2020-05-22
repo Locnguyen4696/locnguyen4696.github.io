@@ -73,6 +73,7 @@ let quiz = [
   },
 ];
 let questionNumber = 0;
+let score= 0;
 function addQuestion(input) {
   document.querySelector(".question").innerText = quiz[input].question;
   document.querySelector("#a").innerText = quiz[input].a;
@@ -81,25 +82,52 @@ function addQuestion(input) {
   document.querySelector("#d").innerText = quiz[input].d;
   questionNumber = input;
 }
+function resetState() {
+  document.querySelector("#a").style.backgroundColor = "#2F6DAE";
+  document.querySelector("#b").style.backgroundColor = "#2F6DAE";
+  document.querySelector("#c").style.backgroundColor = "#2F6DAE";
+  document.querySelector("#d").style.backgroundColor = "#2F6DAE";
+}
 function quit() {
   window.location.href = "index.html";
 }
 function skip() {
+  resetState(); 
+  questionNumber++;
+  
+  if(questionNumber==10){
+    window.location.href="result.html";
    
-    questionNumber++;
+  }else{
     addQuestion(questionNumber);
-    
+  }
+  
+}
+function getScore(){
+  document.querySelector('.score').innerText=score+"/10";
 }
 
 function checkAnswer(input) {
-    if(quiz[questionNumber].answer.id==input){
-        document.getElementById(input).style.backgroundColor="#62C370";
-        
+  if (quiz[questionNumber].answer.id == input) {
+    document.getElementById(input).style.backgroundColor = "#62C370";
+    score++;
+  } else {
+    document.getElementById(input).style.backgroundColor = "red";
+    document.getElementById(
+      quiz[questionNumber].answer.id
+    ).style.backgroundColor = "#62C370";
+  }
+  getScore();
+  setTimeout(function skip() {
+    resetState(); 
+    questionNumber++;
+    if(questionNumber==10){
+      window.location.href="result.html";
     }else{
-        document.getElementById(input).style.backgroundColor="red";
-        document.getElementById(quiz[questionNumber].answer.id).style.backgroundColor="#62C370";
+      addQuestion(questionNumber);
     }
-    skip();
+  },2000);
+ 
 }
 function getStart() {
   document.querySelector(".main-container").classList.add("started");
@@ -108,5 +136,7 @@ function getStart() {
   document.querySelector(".answer").style.display = "flex";
   document.querySelector(".quit").style.display = "block";
   document.querySelector(".skip").style.display = "block";
+  document.querySelector(".score").style.display = "block";
   addQuestion(0);
+  score=0;
 }
