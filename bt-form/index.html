@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bt Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form">
+        <h1>Đăng nhập</h1>
+        <form>
+            <label for="email">Nhập Email</label><br>
+            <input type="text" name="email" id="email"><br>
+            <label for="password">Nhập password</label><br>
+            <input type="password" name="password" id="password">
+            <input type="button" id="show" onclick="showValue()" value="Show/Hide"><br>
+            <label for="remember">Remember</label>
+            <input type="checkbox" name="remember" id="remember"><br>
+            <input type="button" value="Login"><input type="button" onclick="window.location.href='register.html'" value="Register">
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 
