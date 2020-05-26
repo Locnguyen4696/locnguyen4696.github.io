@@ -21,6 +21,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
   {
     question: "Câu hỏi 4",
@@ -28,6 +29,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
   {
     question: "Câu hỏi 5",
@@ -35,6 +37,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
   {
     question: "Câu hỏi 6",
@@ -42,6 +45,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
   {
     question: "Câu hỏi 7",
@@ -49,6 +53,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
   {
     question: "Câu hỏi 8",
@@ -56,6 +61,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
   {
     question: "Câu hỏi 9",
@@ -63,6 +69,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
   {
     question: "Câu hỏi 10",
@@ -70,6 +77,7 @@ let quiz = [
     b: "Đáp án b",
     c: "Đáp án c",
     d: "Đáp án d",
+    answer: b,
   },
 ];
 let questionNumber = 0;
@@ -110,7 +118,10 @@ function getScore(){
 function checkAnswer(input) {
   if (quiz[questionNumber].answer.id == input) {
     document.getElementById(input).style.backgroundColor = "#62C370";
-    score++;
+    if(score<11){
+      score++;
+    }
+   
   } else {
     document.getElementById(input).style.backgroundColor = "red";
     document.getElementById(
@@ -126,7 +137,7 @@ function checkAnswer(input) {
     }else{
       addQuestion(questionNumber);
     }
-  },2000);
+  },1500);
  
 }
 function getStart() {
