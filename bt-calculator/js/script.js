@@ -157,3 +157,9 @@ function equal() {
       break;
   }
 }
+
+  $('.darkMode').click(function(){
+    $('.darkMode').toggleClass('clicked')
+    $('.switch').toggleClass("clicked")
+    darkMode=true;
+  });

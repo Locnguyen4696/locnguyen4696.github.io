@@ -65,3 +65,30 @@ body{
 #calButton{
 	background-color: #ededf1 !important;
 }
+.darkMode{
+	position: fixed;
+	width: 70px;
+	height: 35px;
+	bottom: 10%;
+	right: 10% !important;
+	background-color: green;
+	border-radius: 50px;
+	border: solid 1px black;
+}
+
+.switch{
+	position: absolute;
+	background-color: white !important;
+	top: -1px;
+	height: 35px;
+	width: 35px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.clicked{
+	right: 0px;
+	background-color: #b8b8be;
+}
