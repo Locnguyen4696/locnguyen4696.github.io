@@ -25,11 +25,12 @@ for(let i=1960;i<2021;i++){
   year.add(option);
 }
 function register(){
-
   user.name=document.getElementById('name').value;
   user.bday=[day=document.getElementById('day').value,document.getElementById('month').value,document.getElementById('year').value];
   user.sex=document.getElementById('sex').value;
   user.address=document.getElementById('address').value;
   user.tel=document.getElementById('tel').value;
   user.email=document.getElementById('email').value;
+  console.log(user)
+  window.location.href="register.html";
 }
