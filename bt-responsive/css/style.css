@@ -23,8 +23,8 @@ body {
 .menu {
   font-size: 16px;
 }
-.menu ul{
-    padding: 0;
+.menu ul {
+  padding: 0;
 }
 .menu li {
   list-style: none;
@@ -34,13 +34,13 @@ body {
   align-items: center;
 }
 .menu-active::before {
-    content: " ";
-    width: 3px;
-    height: 80%;
-    border-radius: 5px;
-    margin: 0 20px;
-    background-color: red;
-  }
+  content: " ";
+  width: 3px;
+  height: 80%;
+  border-radius: 5px;
+  margin: 0 20px;
+  background-color: red;
+}
 .menu li::before {
   content: " ";
   width: 3px;
@@ -67,7 +67,7 @@ body {
   min-height: 100vh;
 }
 .header {
-  position: fixed ;
+  position: fixed;
   height: 10vh;
   width: 85vw;
   display: flex;
@@ -91,7 +91,6 @@ body {
   border-radius: 5px;
 }
 .list-items {
-  
   background-color: black;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -119,9 +118,9 @@ body {
   .search > div {
     display: none;
   }
-  .menu li::before{
-      width: 0;
-      margin: 0;
+  .menu li::before {
+    width: 0;
+    margin: 0;
   }
 }
 @media (max-width: 576px) {
