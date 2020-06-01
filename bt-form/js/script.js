@@ -32,7 +32,6 @@ function register() {
   user.tel = document.getElementById('tel').value;
   user.email = document.getElementById('email').value;
   console.log(user)
-  window.location.href = "register.html";
   document.getElementById('name').innerText = user.name;
   document.getElementById('bday').innerText = user.name[0] + user.name[1] + user.name[2];
   document.getElementById('sex').innerText = user.sex;
