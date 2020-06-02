@@ -10,3 +10,4 @@
 <a href="https://locnguyen4696.github.io/html-test/index.html">Bài test HTML CSS</a><br>
 <a href="https://locnguyen4696.github.io/bt-calculator/index.html">Bài tập Calculator</a><br>
 <a href="https://locnguyen4696.github.io/bt-responsive/index.html">Bài tập Responsive</a><br>
+<a href="https://locnguyen4696.github.io/bt-psd/index.html">Bài tập Cắt PSD</a><br>
